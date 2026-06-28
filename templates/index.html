@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Study Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>📚 AI Study Assistant</h1>
+
+    <!-- NOTES -->
+    <textarea id="notes" placeholder="Paste your study notes..."></textarea>
+
+    <!-- DIFFICULTY -->
+    <select id="level">
+        <option value="easy">Easy</option>
+        <option value="medium" selected>Medium</option>
+        <option value="hard">Hard</option>
+    </select>
+
+    <!-- SUMMARY -->
+    <button id="summaryBtn">Generate Summary</button>
+    <div id="summaryOutput" class="box"></div>
+
+    <!-- QUESTIONS -->
+    <button id="questionBtn">Generate Questions</button>
+    <div id="questionOutput" class="box"></div>
+
+    <!-- FLASHCARDS -->
+    <button id="flashBtn">Generate Flashcards</button>
+    <div id="flashOutput" class="box"></div>
+
+    <!-- CHAT -->
+    <h3>Ask AI</h3>
+
+    <input id="userQuestion" placeholder="Ask something..." />
+    <button id="askBtn">Send</button>
+
+    <div id="answerOutput" class="chat-box"></div>
+
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
